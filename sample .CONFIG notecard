@@ -1,0 +1,69 @@
+DEFAULT::Single:Relax
+ANIM|meditation|<0,0,1>|<0,0,0>|express_surprise_emote~express_toothsmile|Seat 1
+ANIM|meditation|<1,0,1>|<0,0,0>|express_toothsmile|Seat 2
+ANIM|meditation|<2,0,1>|<0,0,0>|express_surprise_emote|Seat 3
+ANIM|meditation|<3,0,1>|<0,0,0>||Seat 4
+
+
+BTN:UTILITIES:Sync-
+LINKMSG|-888|sync
+BTN:UTILITIES:Swap 1-2{1~2}
+LINKMSG|202|1,2
+BTN:UTILITIES:Swap 3-4{3~4}
+LINKMSG|202|3,4
+BTN:UTILITIES:ChangeSeat-
+LINKMSG|-888|ChangeSeat
+BTN:UTILITIES:Offset-
+LINKMSG|-888|offset
+BTN:UTILITIES:Admin-{owner}
+LINKMSG|-888|admin
+BTN:UTILITIES:GetHud{owner}
+LINKMSG|-999|RezHud
+BTN:UTILITIES:UsedMemory{owner}
+LINKMSG|34334
+
+BTN:UTILITIES:Settings:Access:Public{owner}
+LINKMSG|-240|permit=Public
+BTN:UTILITIES:Settings:Access:Group{owner}
+LINKMSG|-240|permit=Group
+BTN:UTILITIES:Settings:Access:Owner{owner}
+LINKMSG|-240|permit=Locked
+
+BTN:UTILITIES:Settings:Menu on Sit:On{owner}
+LINKMSG|-240|menuonsit=on
+BTN:UTILITIES:Settings:Menu on Sit:Off{owner}
+LINKMSG|-240|menuonsit=off
+
+BTN:UTILITIES:Settings:Sit for Menu:On.{owner}
+LINKMSG|-240|sit2getmenu=on
+BTN:UTILITIES:Settings:Sit for Menu:Off.{owner}
+LINKMSG|-240|sit2getmenu=off
+
+BTN:UTILITIES:Settings:Start at...:default{owner}
+LINKMSG|-240|2default=on
+BTN:UTILITIES:Settings:Start at...:last{owner}
+LINKMSG|-240|2default=off
+
+BTN:UTILITIES:Settings:RLV:..On..{owner}
+LINKMSG|-240|rlvbaser=on
+BTN:UTILITIES:Settings:RLV:..Off..{owner}
+LINKMSG|-240|rlvbaser=no
+
+BTN:UTILITIES:Settings:Facial:.On.
+LINKMSG|-240|facialExp=on
+BTN:UTILITIES:Settings:Facial:.Off.
+LINKMSG|-240|facialExp=off
+
+
+
+SET:Single:Relax
+XANIM|meditation|<0,0,1>|<0,0,0>||Seat 1|1
+XANIM|meditation|<1,0,1>|<0,0,0>||Seat 2|2
+XANIM|meditation|<2,0,1>|<0,0,0>||Seat 3|3
+XANIM|meditation|<3,0,1>|<0,0,0>||Seat 4|4
+
+
+
+SET:Couple:Cuddle{3~4}
+XANIM|meditation|<0,0,1>|<0,0,0>||Seat 3|3~
+XANIM|meditation|<1,0,1>|<0,0,0>||Seat 4|4~
