@@ -1,0 +1,23 @@
+ANIM command still works normaly.
+
+Syntax of ANIM and XANIM:
+
+ANIM|animation name|Position vector|Rotation vector|expression(s)|Seat name|
+XANIM|animation name|Position vector|Rotation vector|expression(s)|Seat name|Seat number (~ for multiple seat change)
+
+
+#Single Poses... changes poses independently of the other sitters. useful for having the same animation positioned differently for different sitters.
+
+SET:Single:Relax
+XANIM|meditate|<0,0,1>|<0,0,0>||Seat 1|1
+XANIM|meditate|<1,0,1>|<0,0,0>||Seat 2|2
+XANIM|meditate|<2,0,1>|<0,0,0>||Seat 3|3
+XANIM|meditate|<3,0,1>|<0,0,0>||Seat 4|4
+
+
+
+#Multiple people poses... just add a "~" and limit who can access the menu with {}...in this example the animations effect the sitters 3 and 4 independently from the other sitters (useful for couple animations in a tub with (lets say) 4 seats. User 1 can control sitters in seats 3 and 4 but is unaffected himself.
+
+SET:Couple:Cuddle{1~3~4}
+XANIM|meditate|<0,0,1>|<0,0,0>||Seat 3|3~
+XANIM|meditate|<1,0,1>|<0,0,0>||Seat 4|4~
